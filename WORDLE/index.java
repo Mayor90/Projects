@@ -1,5 +1,5 @@
 import java.util.*;
-
+//This is a clone of the popular wordle game. The goal is to match the input string within five tries.
 public class index{
     public static void main(String[] args) {
         
