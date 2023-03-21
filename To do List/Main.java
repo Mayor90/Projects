@@ -1,3 +1,4 @@
+/*The program creates a to do list in the console window. The user is allowed to add and remove tasks from the to do list*/
 import java.util.*;
 import java.util.ArrayList;
 import java.util.Scanner;
