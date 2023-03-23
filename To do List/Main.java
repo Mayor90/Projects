@@ -9,20 +9,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Boolean x = true;
+      String user;
         int choice;
         while (x) {
             displayMenu();
-            try{
-               choice = input.nextInt();
-            }
-            catch(Exception e){
-              System.out.println("Invalid choice. Please try again.");
-              displayMenu();
-               choice = input.nextInt();
-            }
+             user = input.nextLine();
+             if(user.length() > 1) choice = 5;
+             else choice = user.charAt(0) - '0';
+          
+           
                 switch (choice) {
                     case 1:
-                        addTask();
+                        Main.addTask();
                         break;
                     case 2:
                         removeTask();
@@ -90,7 +88,7 @@ public class Main {
         } else {
             System.out.println("\nTasks:");
             for (String task : tasks) {
-                System.out.println(count + ".\t " + task);
+                System.out.println(count + " " + task);
                 count++;
             }
         }
