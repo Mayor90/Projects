@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:visited{
+    text-decoration: none;
+}
+body{
+    background-image: url(Images/mainbackground.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.container{
+    width: 100%;
+    padding: 0px 60px;
+    min-height: 100vh;
+    height: fit-content;
+    
+}
+.navbar{
+
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: right;
+   
+}
+.navbar div{
+
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
+    transition: 0.6s ease;
+}
+
+.navbar div:hover{
+    color: #00DBDE;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.socials{
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    padding: 0px 40px;
+}
+.socials:hover{
+    color: black;
+}
+.content{
+   
+    width: 50%;
+    margin: 60px 0px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.h3-text{
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    
+}
+p{
+    font-size: 14px;
+    text-align: justify;
+    line-height: 35px;
+}
+.content{
+    min-height: 65vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .about-me{
+    
+    width: 45%;
+}
+.content .animation{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.animation img{
+    width: 100%;
+}
+.content #welcome{
+    
+    width: 350px;
+    margin: 15px 0px;
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+    padding: 10px 30px;
+}
+.content #introduction{
+    font-size: 50px;
+    margin: 15px 0px;
+    
+   
+}
+.content #about{
+    text-align: justify;
+    line-height: 35px;
+}
+#skills{
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 30px;
+    
+}
+
+#skills-title, .project-title{
+    margin: 20px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    
+}
+.skills-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.skills-container .skill{
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.361);
+    margin: 50px 60px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    padding: 20px;
+    text-align: center;
+    font-weight: bolder;
+    background: radial-gradient(circle at 50% 120%, #3232323a, #0a0a0a91 80%, #0000002c 100%);
+  
+}
+#projects{
+   
+    width: 100%;
+    text-align: center;
+    margin: 80px 0px;
+}
+#projects p{
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+#projects .projects-container{
+ 
+    margin: 100px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.projects-container .project{
+    margin-bottom: 40px;
+    width: 40%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.6s ease;
+}
+
+.project img{
+    width: 100%;
+   
+}
+.project:hover{
+    transform: scale(1.1);
+}
+.project .project-link{
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    display: flex;
+    height: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.9s ease-in;
+   
+
+}
+.project .project-link span{
+    margin: 25px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+}
+.project:hover .project-link{
+   
+    opacity: 1;
+    height: 100%;
+}
+.project .project-link a:hover{
+    text-decoration: underline;
+}
+footer{
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.contact{
+    
+    padding: 15px 40px;
+    height: 100%;
+    width: 60%;
+}
+.contact .h3-text{
+    font-size: 30px;
+    margin: 30px 0px;
+
+}
+.contact input{
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: inline;
+    width: 300px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    margin: 10px 0px;
+    margin-right: 10px;
+    
+    
+}
+.contact textarea{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    width: 615px;
+    border-radius: 20px;
+    padding: 20px;
+}
+::placeholder  {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+footer button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 10px;
+    margin: 15px 0px;
+    width: 110px;
+    border: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.social-media{
+   
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social-media img{
+    width: 60%;
+    border-radius: 50%;
+    margin: 50px;
+}
+.social-media .linkedin{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.social-media .linkedin i{
+    font-size: 30px;
+    margin: 20px;
+}
+.social-media .linkedin p{
+    font-size: 16px;
+}
