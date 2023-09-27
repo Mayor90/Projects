@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Home</title>
+    <link rel = "stylesheet" href = "style.css"> 
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="lib/big.min.js"></script>
+    <script type="text/javascript" src="lib/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="lib/jszip.min.js"></script>
+    <script type="text/javascript" src="lib/core.min.js"></script>
+    <script type="text/javascript" src="lib/geom.min.js"></script>
+    <script type="text/javascript" src="lib/stroke.min.js"></script>
+    <script type="text/javascript" src="lib/batik-svgpathparser.min.js"></script>
+    <script type="text/javascript" src="lib/jsXmlSaxParser.min.js"></script>
+    <script type="text/javascript" src="lib/triangulator.min.js"></script>
+    <script type="text/javascript" src="lib/viewmodel.min.js"></script>
+    <script type="text/javascript" src="lib/viewhome.min.js"></script>    
+    <style type="text/css">
+        /* The class of components handled by the viewer */
+.viewerComponent {
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class = "heading">
+        <div class="navbar">
+            <div class="logo">
+                <a href = "index.html"><img src = "Images/Claflin Logo 2.jpg"></a>
+                <div class="logo-text thousand-max-width">
+                    <a href = "index.html">
+                    <div class="university-name">CLAFLIN University</div>
+                    <div class="university-motto">The World Needs Visionaries</div>
+                    </a>
+                </div>
+                
+            </div>    
+            <div class="navbar-content thousand-max-width">
+                <a href = "index.html"><h2 class = "content">Smart Home Systems</h2></a>
+                <a href = "view-home.html"><h2 class = "content">View Home</h2></a>
+                <a href = "workswith.html"><h2 class = "content">Works With</h2></a>
+                <a href="team.html"><h2 class = "content">Meet the team</h2></a>
+            </div>
+
+
+            <div class="view-model">
+                <button class = "btn" onclick='viewHomeInOverlay("Final%20Draft%201.zip", 
+              {roundsPerMinute:    1,                              /* Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing */ 
+               widthByHeightRatio: 2,                            /* Size ratio of the displayed canvas */
+               navigationPanel: "none",                            /* Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key 
+                                                                      attribute set "UP", "DOWN", "LEFT", "RIGHT"... to replace the default navigation panel, "none" if missing */ 
+               aerialViewButtonText: "Aerial view",                /* Text displayed for aerial view radio button, no radio buttons if missing */ 
+               virtualVisitButtonText: "Virtual visit",            /* Text displayed for virtual visit radio button, no radio buttons if missing */
+            /* level: "Roof", */                                   /* Uncomment to select the displayed level, default level if missing */
+            /* selectableLevels: ["Ground floor", "Roof"], */      /* Uncomment to choose the list of displayed levels, no select component if empty array */
+            /* camera: "Exterior view", */                         /* Uncomment to select a camera, default camera if missing */
+            /* selectableCameras: ["Exterior view", "Kitchen"], */ /* Uncomment to choose the list of displayed cameras, no camera if missing */
+               activateCameraSwitchKey: true,                      /* Switch between top view / virtual visit with space bar if not false or missing */
+               viewerControlsAdditionalHTML: "",                   /* Additional HTML text appended to controls displayed below the canvas 3D, by default empty */
+               readingHomeText: "Reading",                         /* Comment displayed while reading home */
+               readingModelText: "Model",                          /* Comment displayed while reading models */
+               noWebGLSupportError: "No WebGL support"             /* Error message displayed if the browser do not support WebGL */
+              })'>View Model</button>
+            </div>
+
+            
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+                <div class="text">MENU</div>
+            </div>
+
+            
+        </div>
+        
+        <div id="mini-bar">
+
+        </div>
+        
+       
+    </div>
+    <div class="image-carousel">
+        <div class="carousel-image">
+            <div class="carousel-text">Lorem ipsum dolor 1</div>
+        </div>
+        <div class="carousel-image">
+            <div class="carousel-text">Lorem ipsum dolor 2</div>
+        </div>
+        <div class="carousel-image">
+            <div class="carousel-text">Lorem ipsum dolor 3</div>
+        </div>
+        <div class="carousel-image">
+            <div class="carousel-text">Lorem ipsum dolor 4</div>
+        </div>
+        <div class="carousel-image">
+            <div class="carousel-text">Lorem ipsum dolor 5</div>
+        </div>
+        <div class="carousel-image">
+            <div class="carousel-text">Lorem ipsum dolor 6</div>
+        </div>
+        <div class="carousel-image">
+            <div class="carousel-text">Lorem ipsum dolor 7</div>
+        </div>
+        <div class="carousel-image">
+            <div class="carousel-text">Lorem ipsum dolor 8</div>
+        </div>
+        
+      
+    </div>
+    <div class="viewhome-content">
+        <div id="home-layout">
+            <div class="text">
+                <h2 class="h2-text">
+                    Home Layout
+                </h2>
+                <p class="p-text">The simple bungalow home presents a charming layout that exudes a cozy and inviting atmosphere. As you enter through the front door, you're greeted by an open living area that seamlessly connects the living room, dining space, and kitchen. The modest yet functional kitchen features a compact design with easy access to the dining area. The bedrooms, tucked away for privacy, offer a retreat-like ambiance, while the bathroom is conveniently located nearby. With its efficient use of space, this home provides a warm and comfortable environment.
+                </p>
+            </div>
+            
+            
+            
+            <div id = "location">Home Layout</div>
+            <div class="image">
+                
+                <!--
+                    <img src="Images/Home Images/Layout3.png" alt="Layout" usemap="#rooms-map">
+                <map id = "map_ID" name="rooms-map">
+                    <area shape="rect" coords="566, 410, 991, 663" href="#living-room" alt="Living-room">
+                    <area shape="rect" coords="285, 410, 561, 663" href="#dining-room" alt="Dining-room">
+                    <area shape="rect" coords="0, 386, 290, 693" href="#kitchen" alt="Kitchen">
+                    <area shape="rect" coords="0, 110, 290, 387" href="#bedroom" alt="Bedroom">
+                    <area shape="rect" coords="609, 87, 830, 290" href="#medical-room" alt="Medical-room">
+                    <area shape="rect" coords="830, 151, 1100, 411" href="#lab" alt="Laboratory">
+                    <area shape="rect" coords="278, 0, 553, 218" href="#bathroom" alt="Bathroom">
+                    <area shape="rect" coords="285, 286, 491, 407" href="" alt="Lobby">
+                    <area shape="rect" coords="614, 297, 830, 406" href="" alt="Lobby">
+                    <area shape="rect" coords="285, 214, 489, 282" href="" alt="Storage">
+                    <area shape="rect" coords="494, 221, 613, 406" href="" alt="Guest-toilet">
+                </map>
+                -->
+                
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 694">
+                    <image width="1100" height="694" xlink:href="Images/Home Images/Layout3.png"></image> 
+                    <a class = "location" xlink:href="#bedroom">
+                      <rect  x="0" y="111" fill="#fff" opacity="0" width="280" height="274"></rect>
+                    </a>
+                    <a class = "location" xlink:href="#kitchen">
+                      <rect x="0" y="384" fill="#fff" opacity="0" width="289" height="308"></rect>
+                    </a>
+                    <a class = "location" xlink:href="#bathroom">
+                      <rect  x="279" y="0" fill="#fff" opacity="0" width="276" height="214"></rect>
+                    </a>
+                    <a class = "location" xlink:href="#storage">
+                      <rect x="280" y="215" fill="#fff" opacity="0" width="210" height="65"></rect>
+                    </a>
+                    <a class = "location" xlink:href="#lobby">
+                      <rect x="281" y="280" fill="#fff" opacity="0" width="209" height="122"></rect>
+                    </a>
+                    <a class = "location" xlink:href="#dining-room">
+                      <rect x="289" y="403" fill="#fff" opacity="0" width="277" height="258"></rect>
+                    </a>
+                    <a class = "location" xlink:href="#medical-room">
+                      <rect x="612" y="85" fill="#fff" opacity="0" width="216" height="209"></rect>
+                    </a>
+                    <a class = "location" xlink:href="#lab">
+                      <rect x="828" y="146" fill="#fff" opacity="0" width="272" height="264"></rect>
+                    </a>
+                    <a class = "location" xlink:href="#guest-toilet">
+                      <rect x="489" y="211" fill="#fff" opacity="0" width="122" height="192"></rect>
+                    </a>
+                    <a class = "location" xlink:href="#living-room">
+                      <rect x="567" y="403" fill="#fff" opacity="0" width="421" height="259"></rect>
+                    </a>
+                    <a class = "location" xlink:href="#lobby">
+                      <rect x="613" y="295" fill="#fff" opacity="0" width="213" height="107"></rect>
+                    </a>
+                  </svg>
+
+
+            </div>
+        </div>
+
+        <p class="h2-text" style="text-align: center; line-height: 50px; color: maroon; text-transform: none; font-size: 15px;
+            ">Click on a room to learn more.<br> 
+            Hover over room to see where you are
+                
+            </p>
+        
+
+        <div id="living-room">
+            <div class="text">
+                <h2 class="h2-text">
+                    Living room
+                </h2>
+                <p class="p-text">The living room of this smart home is a haven of modern convenience and comfort. At the center of it all is an Alexa smart speaker, ready to respond to voice commands and effortlessly control the connected devices. Mounted on the wall, a sleek Samsung display tablet offers intuitive control and serves as a hub for managing various aspects of the smart home. Adjacent to the tablet, a large Samsung display screen provides immersive entertainment, streaming movies and shows with vibrant clarity. The ambiance is enhanced by a smart lamp that can be adjusted through voice commands or app controls, offering customizable lighting options for any mood. To ensure optimal comfort, a smart humidifier quietly maintains the perfect level of humidity, creating a pleasant environment for relaxation and well-being. Finally, just outside the living-room is a google nest doorbell to enhance home security. The Google Nest doorbell serves as a modern guardian, allowing residents to see and interact with visitors right from their living room. With its high-definition camera and two-way audio capabilities, it provides a sense of reassurance and enables effortless communication. 
+                </p>
+            </div>
+      
+        </div>
+
+        <div id="dining-room">
+            <div class="text">
+                <h2 class="h2-text">
+                    Dining Room
+                </h2>
+                <p class="p-text">The dining room of this simple smart home embodies both elegance and efficiency. The focal point of the room is a beautifully set dining table, ready to host gatherings. Enhancing the dining experience is a Google thermostat, seamlessly integrated into the room's design. This smart device allows for effortless temperature control, ensuring a comfortable ambiance for every occasion. With its sleek and unobtrusive design, the Google thermostat blends seamlessly with the decor while providing the convenience of smart temperature management. . To enhance both ambiance and energy efficiency, two smart lamps grace the space, emanating adjustable lighting that can be controlled via voice commands or smartphone apps.
+                </p>
+            </div>
+            
+        </div>
+
+        <div id="kitchen">
+            <div class="text">
+                <h2 class="h2-text">
+                    Kitchen
+                </h2>
+                <p class="p-text">The kitchen of this smart home is a culinary haven that combines modern technology with sleek design. At the heart of the space stands a Samsung smart fridge, a marvel of innovation with its interactive touchscreen display, voice command capabilities, and advanced food management features. Adjacent to it, a Samsung smart cooker takes center stage, offering precise temperature control, recipe guidance, and remote monitoring for effortless meal preparation. Completing the ensemble, a Delta smart tap enhances functionality with touchless operation, water temperature control, and voice-activated commands. 
+                </p>
+            </div>
+            
+        </div>
+        
+        <div id="bedroom">
+            <div class="text">
+                <h2 class="h2-text">
+                    Bedroom
+                </h2>
+                <p class="p-text">The bedroom of this smart home is a sanctuary of comfort and innovation, embracing cutting-edge technology to enhance the sleep and relaxation experience. A prominent feature is the Samsung display, seamlessly integrated into the room, offering a hub for entertainment, information, and connectivity. Adjacent to it, a Lululemon mirror brings a touch of fitness inspiration, doubling as a personal workout instructor with its interactive display. Positioned strategically, a Google Nest device serves as a voice-controlled assistant, providing convenient access to music, weather updates, and smart home controls. Finally, a smart bed takes center stage, offering personalized comfort settings, sleep tracking, and even gentle wake-up features. With these intelligent devices seamlessly integrated, the bedroom becomes an oasis of tranquility and technology, transforming ordinary nights into extraordinary restful experiences.
+                </p>
+            </div>
+           
+        </div>
+        
+        <div id="medical-room">
+            <div class="text">
+                <h2 class="h2-text">
+                    Medical Room
+                </h2>
+                <p class="p-text">Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit.
+                    Distinctio debitis hic eaque,
+                    atque quibusdam tempore nihil 
+                    itaque officia tempora numquam 
+                    aspernatur repudiandae maiores, 
+                    dolorum consequatur, nisi deleniti. 
+                    Rerum, vel eos?
+                </p>
+            </div>
+            
+        </div>
+        
+        <div id="bathroom">
+            <div class="text">
+                <h2 class="h2-text">
+                    Bathroom
+                </h2>
+                <p class="p-text"> Step into a world of innovation and comfort, where technology enhances every aspect of your bathing experience. Adorned with a sleek smart mirror, you can enjoy personalized lighting settings, weather updates, and even media streaming right at your fingertips. The smart toilet brings ultimate convenience with automated bidet functions, personalized user preferences, and self-cleaning capabilities. As you enter the Kohler shower, digital controls allow you to customize water temperature and flow, creating a truly indulgent experience. This bathroom is a haven of sophistication, where modern luxury meets convenience, providing you with an oasis of relaxation and rejuvenation.
+                </p>
+            </div>
+          
+        </div>
+        
+        <div id="lab">
+            <div class="text">
+                <h2 class="h2-text">
+                    Lab
+                </h2>
+                <p class="p-text">Lorem ipsum dolor sit
+                    amet consectetur adipisicing elit.
+                    Distinctio debitis hic eaque,
+                    atque quibusdam tempore nihil 
+                    itaque officia tempora numquam 
+                    aspernatur repudiandae maiores, 
+                    dolorum consequatur, nisi deleniti. 
+                    Rerum, vel eos?
+                </p>
+            </div>
+           
+        </div>
+
+    </div>
+    
+   
+    </div>
+
+
+    
+    <footer>
+        <div class="logo">
+            <img src ="Images/Claflin Logo 3.jpg">
+        </div>
+
+        <div class="contact">
+            <div class="address">
+                <h3 class="h3-text">CONTACT US</h3>
+                <p class="p-text">400 Magnolia Street</p>
+                <p class="p-text">Orangeburg, SC 29115</p>
+                <p class="p-text">(803) 535 5018</p>
+            </div>
+            <div class="social-media">
+                <h3 class="icon-text h3-text">STAY CONNECTED</h3>
+                <div class="icons">
+                    <a href = "https://www.facebook.com/ClaflinUniversity1869?v=wall" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href = "https://www.instagram.com/claflin1869/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href = "https://twitter.com/ClaflinUniv1869" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href = "https://www.youtube.com/channel/UCor6ta45JRtt1z1A5jZTjVQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+
+                </div>
+            </div>
+
+        </div class = "miscellanous">
+
+        <div>
+            
+        </div>
+    </footer>
+
+  <script src = "script.js"></script>
+  <script src = "view-home-script.js"></script>
+</body>
+
+</html>

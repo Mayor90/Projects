@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Website</title>
+    <link rel = "stylesheet" href = "style.css"> 
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music-speaker.css' rel='stylesheet'>
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script type="text/javascript" src="lib/big.min.js"></script>
+    <script type="text/javascript" src="lib/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="lib/jszip.min.js"></script>
+    <script type="text/javascript" src="lib/core.min.js"></script>
+    <script type="text/javascript" src="lib/geom.min.js"></script>
+    <script type="text/javascript" src="lib/stroke.min.js"></script>
+    <script type="text/javascript" src="lib/batik-svgpathparser.min.js"></script>
+    <script type="text/javascript" src="lib/jsXmlSaxParser.min.js"></script>
+    <script type="text/javascript" src="lib/triangulator.min.js"></script>
+    <script type="text/javascript" src="lib/viewmodel.min.js"></script>
+    <script type="text/javascript" src="lib/viewhome.min.js"></script>    
+    <style type="text/css">
+        /* The class of components handled by the viewer */
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class = "heading">
+        <div class="navbar">
+            <div class="logo">
+                <a href = "index.html"><img src = "Images/Claflin Logo 2.jpg"></a>
+                <div class="logo-text thousand-max-width">
+                    <a href = "index.html">
+                    <div class="university-name">CLAFLIN University</div>
+                    <div class="university-motto">The World Needs Visionaries</div>
+                    </a>
+                </div>
+                
+            </div>    
+            <div class="navbar-content thousand-max-width">
+                <a href = "index.html"><h2 class = "content">Smart Home Systems</h2></a>
+                <a href = "view-home.html"><h2 class = "content">View Home</h2></a>
+                <a href = "workswith.html"><h2 class = "content">Works With</h2></a>
+                <a href="team.html"><h2 class = "content">Meet the team</h2></a>
+            </div>
+
+
+            <div class="view-model">
+                <button class = "btn" onclick='viewHomeInOverlay("Final%20Draft%201.zip", 
+              {roundsPerMinute:    1,                              /* Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing */ 
+               widthByHeightRatio: 2,                            /* Size ratio of the displayed canvas */
+               navigationPanel: "none",                            /* Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key 
+                                                                      attribute set "UP", "DOWN", "LEFT", "RIGHT"... to replace the default navigation panel, "none" if missing */ 
+               aerialViewButtonText: "Aerial view",                /* Text displayed for aerial view radio button, no radio buttons if missing */ 
+               virtualVisitButtonText: "Virtual visit",            /* Text displayed for virtual visit radio button, no radio buttons if missing */
+            /* level: "Roof", */                                   /* Uncomment to select the displayed level, default level if missing */
+            /* selectableLevels: ["Ground floor", "Roof"], */      /* Uncomment to choose the list of displayed levels, no select component if empty array */
+            /* camera: "Exterior view", */                         /* Uncomment to select a camera, default camera if missing */
+            /* selectableCameras: ["Exterior view", "Kitchen"], */ /* Uncomment to choose the list of displayed cameras, no camera if missing */
+               activateCameraSwitchKey: true,                      /* Switch between top view / virtual visit with space bar if not false or missing */
+               viewerControlsAdditionalHTML: "",                   /* Additional HTML text appended to controls displayed below the canvas 3D, by default empty */
+               readingHomeText: "Reading",                         /* Comment displayed while reading home */
+               readingModelText: "Model",                          /* Comment displayed while reading models */
+               noWebGLSupportError: "No WebGL support"             /* Error message displayed if the browser do not support WebGL */
+              })'>View Model</button>
+            </div>
+
+            
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+                <div class="text">MENU</div>
+            </div>
+
+            
+        </div>
+        
+        <div id="mini-bar">
+
+        </div>
+        
+       
+    </div>
+    <div class="home-navigation-container">
+
+        <div class="home-navigation">
+             <div class="voice">  
+                <a href="#voice"><i class="fa-solid fa-volume-high"></i>       
+                <p class="p-text">VOICE</p></a>
+             </div>
+             
+             <div class="music">
+                <a href="#music"><i class="fa-solid fa-headphones"></i>
+                <p class="p-text">MUSIC</p></a>
+             </div>
+
+             <div class="access">
+                <a href="#access"><i class="fa-solid fa-universal-access"></i>
+                <p class="p-text">ACCESS</p></a>
+             </div>
+
+             <div class="lighting">
+                <a href="#lighting"><i class="fa-solid fa-lightbulb"></i>
+                <p class="p-text">LIGHTING</p>
+             </div></a>
+
+             <div class="climate">
+                <a href="#climate"><i class="fa-solid fa-cloud"></i>
+                <p class="p-text">CLIMATE</p></a>
+             </div>
+
+             <div class="security">
+                <a href="#security"><i class="fa-solid fa-lock"></i>
+                <p class="p-text">SECURITY</p></a>
+             </div>
+             <div class="routines">
+                <a href="#routines"><i class="fa-solid fa-tablet"></i>
+                <p class="p-text">ROUTINES</p></a>
+             </div>
+        </div>
+    </div>
+
+    
+    <div id="showcase">
+        
+        <div class="showcase-img">
+            <img src = "Images/backimage.png" >
+            <div class="showcase-text container">
+                <h3 class = "h3-text thousand-max-width" style="color: white;">Claflin University Smart Home</h2>
+                <h2 class = "h2-text thousand-max-width" style="margin-top: 10px; font-size: 40px; color: white;">Control Your Home From Anywhere</h2>
+                <p class="p-text thousand-max-width" style="color: white; margin-top: 15px; font-size: 17px; text-align: center;">A house made complete with smart systems</p>
+            </div>
+        </div>
+       
+    </div>
+    <br><br><br><br><br><br>
+    <div id="introduction">
+        <h3 class = "h3-text">Introducing the</h3>
+        <h2 class = "h2-text" style="color: maroon">Claflin University Smart Home System</h2><br><br>
+        <p class = "p-text">The aim of this project is to design a smart home system that integrates various smart devices and sensors to improve the quality of life for homeowners.
+        The system will be designed to provide users with easy control of home appliances, lighting, temperature, security, and other devices using their smartphones or other devices. To accomplish this, we will implement a combination of hardware and software technologies, including Internet of Things (IoT), machine learning, and cloud computing.<br>
+        The system will use sensors and cameras to gather data about the home environment, analyze this data to make decisions about device control, and use cloud computing to store and process data.</p> <br><br><br><br><br><br>
+        
+    </div>
+    <div class="properties">
+        <div class="control">
+            <img src="Images/smart-home-control.jpg" width="100%"> 
+            <h3 class = "h3-text">Smart Home Control</h3>
+            <h2 class = "h2-text" style="color: maroon">Control your appliances</h2>
+            <p class = "p-text">Smart Home Devices are connected to a central hub controlled by a Google Nest device. This device integrates with numerous compatible devices, allowing you to manage them effortlessly from a single location. Whether it's adjusting the thermostat or controlling the lights the Google Nest device provides an intuitive interface that puts all the control at your fingertips.</p>
+        </div>
+        <div class="alert">
+            <img src="Images/notifications.jpg" width="100%">
+            <h3 class = "h3-text">Smart Alerts</h3>
+            <h2 class = "h2-text" style="color: maroon">Stay connected</h2>
+            <p class = "p-text">In addition to its convenience and comfort features, Google Nest prioritizes home security. With compatible cameras and doorbell systems, you can monitor your home remotely, receive alerts on suspicious activity, and even communicate with visitors through the device's built-in speaker and microphone.</p>
+        </div>
+    </div>
+    <div class="features-intro">
+        <div class="h3-text">
+            Learn about the Smart home system.
+        </div>
+        <div class="h2-text">
+            The smart home is filled with several devices that help it to perform different functions, creating a seamless and interconnected ecosystem. 
+        </div>
+        <a style = "background-color: white;"class = "learn-more p-text" href = "#voice">Learn More</a>
+    </div>
+    <div class="features-container">
+        <div class="child" id = "voice">
+            <div class="child-img">
+                <img src="/Images/voice.jpg" width="50%">
+            </div>
+
+            <div class="child-text">
+                <h3 class="h3-text" style="text-align: left;">VOICE</h3>
+                <h2 class="h2-text" style="color: maroon;text-align: left;">Command your Home with your Voice</h2>
+                <p class="p-text">At the heart of the Google Nest ecosystem lies a central hub that serves as the control center for the smart home. This device integrates with numerous compatible devices, allowing you to manage them effortlessly from a single location. Whether it's adjusting the thermostat, controlling the lights, or locking the front door, the Google Nest device provides an intuitive interface that puts all the control at your fingertips. One of the standout features of Google Nest is its integration with voice assistants like the Google Assistant. By simply saying "Hey Google" followed by your command, you can control various devices in your home.</p>
+                <br><br>
+                <p class="p-text learn-more">Click on a logo to learn more</p>
+            </div>
+
+        </div>
+
+        <div class="child" id = "music">
+            <div class="child-img">
+                <img src="/Images/music.jpg" width="50%">
+            </div>
+
+            <div class="child-text">
+                <h3 class="h3-text" style="text-align: left;">MUSIC</h3>
+                <h2 class="h2-text" style="color: maroon;text-align: left;">Enjoy personalized music anywhere</h2>
+                <p class="p-text">With multi-room audio, you are able to enjoy music in every corner of your house. Voice-activated controls make it effortless to play your favorite playlists or request specific songs. Google Nest learns your musical preferences over time, curating personalized recommendations. Seamlessly integrating with other smart devices, you can create routines that synchronize music with other automated actions. With the flexibility to control music remotely through the Google Home app, your favorite tunes can follow you wherever you go.</p>
+                <br><br>
+                <p class="p-text learn-more">Click on a logo to learn more</p>
+            </div>   
+        </div>
+
+        <div class="child" id = "access">
+            <div class="child-img">
+                <img src="/Images/music.jpg" width="50%">
+            </div>
+
+            <div class="child-text">
+                <h3 class="h3-text" style="text-align: left;">ACCESS</h3>
+                <h2 class="h2-text" style="color: maroon;text-align: left;">Unlock the Door from your phone</h2>
+                <p class="p-text">Thanks to the integration of advanced technologies, such as the Google Video Doorbell and smart locks from trusted brands like Yale, you can experience a new level of home security and convenience. With a Video Doorbell installed at your front entrance, you gain the ability to answer the door from any room in your home. The built-in camera allows you to see who's at the door, while the two-way audio feature enables you to have a conversation with your visitor in real-time.</p>
+                <br><br>
+                <p class="p-text learn-more">Click on a logo to learn more</p>
+            </div>   
+        </div>
+
+        <div class="child" id = "lighting">
+            <div class="child-img">
+                <img src="/Images/music.jpg" width="50%">
+            </div>
+
+            <div class="child-text">
+                <h3 class="h3-text" style="text-align: left;">LIGHTING</h3>
+                <h2 class="h2-text" style="color: maroon;text-align: left;">Smart lighting perfected</h2>
+                <p class="p-text">The lighting experience is made better with a smart lighting system that transforms regular lights into smart lights. With touch control, voice commands, pre-set routines, and seamless integration with the control system, you can easily adjust brightness, turn lights on and off, and create personalized lighting settings. Say goodbye to searching for switches in the dark. Customize your lighting for different occasions or moods with pre-set routines like "Relaxing Evening" or "Bright and Energizing."</p>
+                <br><br>
+                <p class="p-text learn-more">Click on a logo to learn more</p>
+            </div>   
+        </div>
+
+        <div class="child" id = "climate">
+            <div class="child-img">
+                <img src="/Images/music.jpg" width="50%">
+            </div>
+
+            <div class="child-text">
+                <h3 class="h3-text" style="text-align: left;">CLIMATE</h3>
+                <h2 class="h2-text" style="color: maroon;text-align: left;">Set the ambience of your home</h2>
+                <p class="p-text">
+                    Using cutting-edge features of Google thermostats, you can effortlessly regulate the temperature of the living space. In addition to manual controls, the Google Nest thermostat also incorporates intelligent features that enable it to learn and adapt to the homeowners' preferences over time. By observing the patterns of temperature adjustments and occupancy in the house, it can create personalized schedules to automatically adjust the temperature based on the occupants' typical routines. 
+                </p>
+                <br><br>
+                <p class="p-text learn-more">Click on a logo to learn more</p>
+            </div>   
+        </div>
+        
+        <div class="child" id = "security">
+            <div class="child-img">
+                <img src="/Images/music.jpg" width="50%">
+            </div>
+
+            <div class="child-text">
+                <h3 class="h3-text" style="text-align: left;">SECURITY</h3>
+                <h2 class="h2-text" style="color: maroon;text-align: left;">Monitor every occurence in your home</h2>
+                <p class="p-text">
+                    Every room in the home is fitted with a Google nest camera.  With its advanced technology and connectivity, the Google Nest camera provides enhanced surveillance capabilities and peace of mind. A primary function of the camera is its abilty to capture high-quality video footage of the surrounding area. It is equipped with high-definition cameras that can record video in crisp detail, allowing homeowners to monitor their homes
+                </p>
+                <br><br>
+                <p class="p-text learn-more">Click on a logo to learn more</p>
+            </div>   
+        </div>
+        <div class="child" id = "routines">
+            <div class="child-img">
+                <img src="/Images/music.jpg" width="50%">
+            </div>
+
+            <div class="child-text">
+                <h3 class="h3-text" style="text-align: left;">ROUTINES</h3>
+                <h2 class="h2-text" style="color: maroon;text-align: left;">Automate your home</h2>
+                <p class="p-text">
+                    Google Routines are a feature within the Google Assistant ecosystem that allows users to automate tasks with a single command. Users can create personalized routines, defining trigger phrases or times to activate a sequence of actions. For example, a "Good Morning" routine can gradually increase lights, play a radio station, and provide weather forecasts. Another routine, "Bedtime," can lower the thermostat, turn off lights, and play soothing music. Routines can also be location-based, triggering actions upon arrival or departure.</p>
+                <br><br>
+                <p class="p-text learn-more">Click on a logo to learn more</p>
+            </div>   
+        </div>
+
+    </div>
+    
+    <footer>
+        <div class="logo">
+            <img src ="Images/Claflin Logo 3.jpg">
+        </div>
+
+        <div class="contact">
+            <div class="address">
+                <h3 class="h3-text">CONTACT US</h3>
+                <p class="p-text">400 Magnolia Street</p>
+                <p class="p-text">Orangeburg, SC 29115</p>
+                <p class="p-text" >(803) 535 5018</p>
+            </div>
+            <div class="social-media">
+                <h3 class="icon-text h3-text">STAY CONNECTED</h3>
+                <div class="icons">
+                    <a href = "https://www.facebook.com/ClaflinUniversity1869?v=wall" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href = "https://www.instagram.com/claflin1869/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href = "https://twitter.com/ClaflinUniv1869" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href = "https://www.youtube.com/channel/UCor6ta45JRtt1z1A5jZTjVQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+
+                </div>
+            </div>
+
+        </div class = "miscellanous">
+
+        <div>
+            
+        </div>
+    </footer>
+</div>
+
+
+  <script src = "script.js"></script>
+</body>
+
+</html>

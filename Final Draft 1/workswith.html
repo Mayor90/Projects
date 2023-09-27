@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel = "stylesheet" href = "style.css"> 
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="lib/big.min.js"></script>
+    <script type="text/javascript" src="lib/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="lib/jszip.min.js"></script>
+    <script type="text/javascript" src="lib/core.min.js"></script>
+    <script type="text/javascript" src="lib/geom.min.js"></script>
+    <script type="text/javascript" src="lib/stroke.min.js"></script>
+    <script type="text/javascript" src="lib/batik-svgpathparser.min.js"></script>
+    <script type="text/javascript" src="lib/jsXmlSaxParser.min.js"></script>
+    <script type="text/javascript" src="lib/triangulator.min.js"></script>
+    <script type="text/javascript" src="lib/viewmodel.min.js"></script>
+    <script type="text/javascript" src="lib/viewhome.min.js"></script>    
+    <style type="text/css">
+        /* The class of components handled by the viewer */
+.viewerComponent {
+}
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class = "heading">
+        <div class="navbar">
+            <div class="logo">
+                <a href = "index.html"><img src = "Images/Claflin Logo 2.jpg"></a>
+                <div class="logo-text thousand-max-width">
+                    <a href = "index.html">
+                    <div class="university-name">CLAFLIN University</div>
+                    <div class="university-motto">The World Needs Visionaries</div>
+                    </a>
+                </div>
+                
+            </div>    
+            <div class="navbar-content thousand-max-width">
+                <a href = "index.html"><h2 class = "content">Smart Home Systems</h2></a>
+                <a href = "view-home.html"><h2 class = "content">View Home</h2></a>
+                <a href = "workswith.html"><h2 class = "content">Works With</h2></a>
+                <a href="team.html"><h2 class = "content">Meet the team</h2></a>
+            </div>
+
+
+            <div class="view-model">
+                <button class = "btn" onclick='viewHomeInOverlay("Final%20Draft%201.zip", 
+              {roundsPerMinute:    1,                              /* Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing */ 
+               widthByHeightRatio: 2,                            /* Size ratio of the displayed canvas */
+               navigationPanel: "none",                            /* Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key 
+                                                                      attribute set "UP", "DOWN", "LEFT", "RIGHT"... to replace the default navigation panel, "none" if missing */ 
+               aerialViewButtonText: "Aerial view",                /* Text displayed for aerial view radio button, no radio buttons if missing */ 
+               virtualVisitButtonText: "Virtual visit",            /* Text displayed for virtual visit radio button, no radio buttons if missing */
+            /* level: "Roof", */                                   /* Uncomment to select the displayed level, default level if missing */
+            /* selectableLevels: ["Ground floor", "Roof"], */      /* Uncomment to choose the list of displayed levels, no select component if empty array */
+            /* camera: "Exterior view", */                         /* Uncomment to select a camera, default camera if missing */
+            /* selectableCameras: ["Exterior view", "Kitchen"], */ /* Uncomment to choose the list of displayed cameras, no camera if missing */
+               activateCameraSwitchKey: true,                      /* Switch between top view / virtual visit with space bar if not false or missing */
+               viewerControlsAdditionalHTML: "",                   /* Additional HTML text appended to controls displayed below the canvas 3D, by default empty */
+               readingHomeText: "Reading",                         /* Comment displayed while reading home */
+               readingModelText: "Model",                          /* Comment displayed while reading models */
+               noWebGLSupportError: "No WebGL support"             /* Error message displayed if the browser do not support WebGL */
+              })'>View Model</button>
+            </div>
+
+            
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+                <div class="text">MENU</div>
+            </div>
+
+            
+        </div>
+        
+        <div id="mini-bar">
+
+        </div>
+        
+       
+    </div>
+    
+    <div class="workswith-content">
+        
+        <div class="categories">
+            <div class="categories-title">
+                <h2 class="h2-text">Categories</h2>
+                <i id = "dropdown-icon" class="fa-solid fa-caret-down"></i>
+            </div>
+            
+            <ul class="dropdown-menu">
+                <li id = "all"     class="p-text">All Products</li>
+                <li id = "climate" class="p-text">Climate</li>
+                <li id = "cameras" class="p-text">Cameras</li>
+                <li id = "decor"   class="p-text">Decor</li>
+                <li id = "lighting"class="p-text">Lighting</p>
+                <li id = "music"   class="p-text">Music</li>
+                <li id = "security"class="p-text">Security</li>
+                <li id = "cleaning"class="p-text">Cleaning</li>
+                <li id="assistant" class="p-text">Assistant</li>
+
+            </ul>
+        </div>
+        <div class="products">
+            <div class="text">
+                <h2 class="h2-text">The Smart Home works with a wide range of products.</h2>
+                <p class="p-text" style="color: green;">Click on the logo below to learn more about the product</p>
+
+            </div>
+            <div class="logos">
+                <a href="https://aerogarden.com/home/" class = "child decor"><div><img src = "Images/company-logos/Aero_Garden_logo.png" alt="AeroGarden-logo"></div></a>
+                <a href="https://us.aibo.com/" class="child"><div><img src="Images/company-logos/Aibo_logo.png" alt="Aibo-logo" srcset=""></div></a>
+                <a href="https://www.apple.com/imac-24/" class="child"><div><img src="Images/company-logos/Apple_logo.png" alt="Apple-logo" srcset=""></div></a>
+                <a href="https://www.deltafaucet.com/" class="child"><div><img src="Images/company-logos/Delta_logo.png" alt="Delta-logo" srcset=""></div></a>
+                <a href="https://www.dyson.com/air-treatment" class="child climate"><div><img src="Images/company-logos/Dyson_logo.png" alt="Dyson-logo" srcset=""></div></a>
+                <a href="https://store.google.com/category/connected_home?hl=en-US" class="child cameras security music assistant"><div><img src="Images/company-logos/Google_Nest_logo.svg.png" alt="Google-Nest-logo" srcset=""></div></a>
+                <a href="https://us.gosund.com/" class="child lighting"><div><img src="Images/company-logos/Gosund_logo.png" alt="Gosund-logo" srcset=""></div></a>
+                <a href="https://www.kohler.com/en" class="child cleaning"><div><img src="Images/company-logos/Kohler_logo.svg.png" alt="Kohler-logo" srcset=""></div></a>
+                <a href="https://shop.lululemon.com/story/lululemon-studio" class="child decor"><div><img src="Images/company-logos/Lululemon-logo.png" alt="Lululemon-logo" srcset=""></div></a>
+                <a href="https://www.aldebaran.com/en/pepper" class="child assistant"><div><img src="Images/company-logos/Pepper_logo.png" alt="Pepper-logo" srcset=""></div></a>
+                <a href="https://www.samsung.com/us/home-appliances/" class="child cleaning"><div><img src="Images/company-logos/Samsung_Logo.svg.png" alt="Samsung-Logo" srcset=""></div></a>
+                <a href="https://www.smartthings.com/" class="child security assistant"><div><img src="Images/company-logos/Smart_Things_Logo.png" alt="Smart-Things-Logo" srcset=""></div></a>
+                <a href="https://www.withings.com/us/en/" class="child"><div><img src="Images/company-logos/Withings_logo.png" alt="Withings_logo" srcset=""></div></a>
+                <a href="https://www.yalehome.com/us/en" class="child security"><div><img src="Images/company-logos/Yale_Logo.png" alt="Yale-logo" srcset=""></div></a>
+            </div>
+        </div>
+    </div>
+   
+    </div>
+    <footer>
+        <div class="logo">
+            <img src ="Images/Claflin Logo 3.jpg">
+        </div>
+
+        <div class="contact">
+            <div class="address">
+                <h3 class="h3-text">CONTACT US</h3>
+                <p class="p-text">400 Magnolia Street</p>
+                <p class="p-text">Orangeburg, SC 29115</p>
+                <p class="p-text">(803) 535 5018</p>
+            </div>
+            <div class="social-media">
+                <h3 class="icon-text h3-text">STAY CONNECTED</h3>
+                <div class="icons">
+                    <a href = "https://www.facebook.com/ClaflinUniversity1869?v=wall" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href = "https://www.instagram.com/claflin1869/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href = "https://twitter.com/ClaflinUniv1869" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href = "https://www.youtube.com/channel/UCor6ta45JRtt1z1A5jZTjVQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+
+                </div>
+            </div>
+
+        </div class = "miscellanous">
+
+        <div>
+            
+        </div>
+    </footer>
+
+  <script src = "script.js"></script>
+  <script src="workswith-script.js"></script>
+</body>
+
+</html>

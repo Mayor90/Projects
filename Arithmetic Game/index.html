@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   
+    
+    <div class="container">
+        <nav>
+            <h1>Arithmetics Game</h1>
+        </nav>
+        <header id="title">
+        
+            <h3>Answer the question correctly to earn points</h3>
+            <h3>Click Enter to submit or hit the Submit button below</h3>
+        </header>
+        <div class="result">
+            <h2>You've gotten <span id = "correct">0</span> correctly</h2>
+            <h2>You've gotten <span id = "incorrect">0</span> incorrectly</h2>
+        </div>
+        <div class="eqn">
+            <h2 id="leftNum" class="number"></h2>
+            <h2 id= "symbol">+</h2>
+            <h2 id= "rightNum" class="number"></h2>
+            <h2 class="equals">=</h2>
+            <input type="number" id = "solution" class="number">
+            <div class="check">
+                <i id = "right"class="fa-solid fa-check"></i>
+                <i id = "wrong" class="fa-solid fa-x"></i>
+            </div>
+        
+        </div>
+        <div id="btn">
+            <button onclick="submit()">Submit</button>
+            <button onclick = "reset()">Reset</button>
+        </div>
+    </div>
+    
+   
+    <script src = "script.js"></script>
+    
+</body>
+</html>

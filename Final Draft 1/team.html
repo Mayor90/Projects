@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Team</title>
+    <link rel = "stylesheet" href = "style.css"> 
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="lib/big.min.js"></script>
+    <script type="text/javascript" src="lib/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="lib/jszip.min.js"></script>
+    <script type="text/javascript" src="lib/core.min.js"></script>
+    <script type="text/javascript" src="lib/geom.min.js"></script>
+    <script type="text/javascript" src="lib/stroke.min.js"></script>
+    <script type="text/javascript" src="lib/batik-svgpathparser.min.js"></script>
+    <script type="text/javascript" src="lib/jsXmlSaxParser.min.js"></script>
+    <script type="text/javascript" src="lib/triangulator.min.js"></script>
+    <script type="text/javascript" src="lib/viewmodel.min.js"></script>
+    <script type="text/javascript" src="lib/viewhome.min.js"></script>    
+    <style type="text/css">
+        /* The class of components handled by the viewer */
+.viewerComponent {
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class = "heading">
+        <div class="navbar">
+            <div class="logo">
+                <a href = "index.html"><img src = "Images/Claflin Logo 2.jpg"></a>
+                <div class="logo-text thousand-max-width">
+                    <a href = "index.html">
+                    <div class="university-name">CLAFLIN University</div>
+                    <div class="university-motto">The World Needs Visionaries</div>
+                    </a>
+                </div>
+                
+            </div>    
+            <div class="navbar-content thousand-max-width">
+                <a href = "index.html"><h2 class = "content">Smart Home Systems</h2></a>
+                <a href = "view-home.html"><h2 class = "content">View Home</h2></a>
+                <a href = "workswith.html"><h2 class = "content">Works With</h2></a>
+                <a href="team.html"><h2 class = "content">Meet the team</h2></a>
+            </div>
+
+
+            <div class="view-model">
+                <button class = "btn" onclick='viewHomeInOverlay("Final%20Draft%201.zip", 
+              {roundsPerMinute:    1,                              /* Rotation speed of the animation launched once home is loaded in rounds per minute, no animation if missing */ 
+               widthByHeightRatio: 2,                            /* Size ratio of the displayed canvas */
+               navigationPanel: "none",                            /* Displayed navigation arrows, "none" or "default" for default one or an HTML string containing elements with data-simulated-key 
+                                                                      attribute set "UP", "DOWN", "LEFT", "RIGHT"... to replace the default navigation panel, "none" if missing */ 
+               aerialViewButtonText: "Aerial view",                /* Text displayed for aerial view radio button, no radio buttons if missing */ 
+               virtualVisitButtonText: "Virtual visit",            /* Text displayed for virtual visit radio button, no radio buttons if missing */
+            /* level: "Roof", */                                   /* Uncomment to select the displayed level, default level if missing */
+            /* selectableLevels: ["Ground floor", "Roof"], */      /* Uncomment to choose the list of displayed levels, no select component if empty array */
+            /* camera: "Exterior view", */                         /* Uncomment to select a camera, default camera if missing */
+            /* selectableCameras: ["Exterior view", "Kitchen"], */ /* Uncomment to choose the list of displayed cameras, no camera if missing */
+               activateCameraSwitchKey: true,                      /* Switch between top view / virtual visit with space bar if not false or missing */
+               viewerControlsAdditionalHTML: "",                   /* Additional HTML text appended to controls displayed below the canvas 3D, by default empty */
+               readingHomeText: "Reading",                         /* Comment displayed while reading home */
+               readingModelText: "Model",                          /* Comment displayed while reading models */
+               noWebGLSupportError: "No WebGL support"             /* Error message displayed if the browser do not support WebGL */
+              })'>View Model</button>
+            </div>
+
+            
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+                <div class="text">MENU</div>
+            </div>
+
+            
+        </div>
+        
+        <div id="mini-bar">
+
+        </div>
+        
+       
+    </div>
+    
+    <div class="team-leaders">
+        <div class="leader">
+            <div class="image"></div>
+            <div class="description p-text">
+                <span class = "name">DR. KARINA LILES</span><br><hr>
+                School of Natural Sciences and Mathematics<br>
+                Claflin University<br>
+                kliles@claflin.edu
+            </div>
+        </div>
+       
+        <!-- <div class="leader">
+            <div class="image"></div>
+            <div class="description p-text">
+                <span class = "name">DR. SHRIKANT PAWAR </span><br><hr>
+                School of Natural Sciences and Mathematics<br>
+                Claflin University<br>
+                spawar@claflin.edu
+            </div> -->
+        </div>
+    </div>
+    <div class="team-members">
+        <div class="member">
+            <div class="image"></div>
+            <div class="description p-text">
+                <span class="name">Justin Adams</span><br><hr>
+                School of Natural Sciences and Mathematics<br>
+                Claflin University<br>
+                juadams@claflin.edu
+            </div>
+        </div>
+        
+        <div class="member">
+            <div class="image"></div>
+            <div class="description p-text">
+                <span class="name">Karriem McGriff</span><br><hr>
+                School of Technology, Engineering, Science and Maths<br>
+                Morris University<br>
+                k_mac95@hotmail.com
+            </div>
+        </div>
+        
+        <div class="member">
+            <div class="image"></div>
+            <div class="description p-text">
+                <span class="name">USMAN-AGUDA OJOCHIDE</span><br><hr>
+                School of Natural Sciences and Mathematics<br>
+                Claflin University<br>
+                ousmanaguda@claflin.edu
+            </div>
+        </div>
+        
+        <div class="member">
+            <div class="image"></div>
+            <div class="description p-text">
+                <span class="name">OLUWAMAYOWA OWOLABI</span><br><hr>
+                School of Natural Sciences and Mathematics<br>
+                Claflin University<br>
+                oowolabi@claflin.edu
+            </div>
+        </div>
+        
+        <div class="member">
+            <div class="image"></div>
+            <div class="description p-text">
+                <span class="name">William White</span><hr>
+                School of Technology, Engineering, Science and Maths<br>
+                Morris University<br>
+                william.white9920@gmail.com
+            </div>
+        </div>
+        
+        <div class="member">
+            <div class="image"></div>
+            <div class="description p-text">
+                <span class="name">Zaria Duckett</span><br><hr>
+                School of Natural Sciences and Mathematics<br>
+                Claflin University<br>
+                zduckett@claflin.edu
+            </div>
+        </div>
+        
+        <div class="member">
+            <div class="image"></div>
+            <div class="description p-text">
+                <span class="name">Zoë Johnson</span><br><hr>
+                School of Natural Sciences and Mathematics<br>
+                Claflin University<br>
+                zojohnson@claflin.edu
+            </div>
+        </div>
+        
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img src ="Images/Claflin Logo 3.jpg">
+        </div>
+
+        <div class="contact">
+            <div class="address">
+                <h3 class="h3-text">CONTACT US</h3>
+                <p class="p-text">400 Magnolia Street</p>
+                <p class="p-text">Orangeburg, SC 29115</p>
+                <p class="p-text">(803) 535 5018</p>
+            </div>
+            <div class="social-media">
+                <h3 class="icon-text h3-text">STAY CONNECTED</h3>
+                <div class="icons">
+                    <a href = "https://www.facebook.com/ClaflinUniversity1869?v=wall" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href = "https://www.instagram.com/claflin1869/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href = "https://twitter.com/ClaflinUniv1869" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href = "https://www.youtube.com/channel/UCor6ta45JRtt1z1A5jZTjVQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+
+                </div>
+            </div>
+
+        </div class = "miscellanous">
+
+        <div>
+            
+        </div>
+    </footer>
+
+  <script src = "script.js"></script>
+</body>
+
+</html>
