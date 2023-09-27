@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = stylesheet href = "style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="desc">
+            <h3 class="cap">HTML+CSS</h3>
+            <h1 class = "small">JavaScript</h1>
+            <h3 class = "cap">CALCULATOR</h3>
+        </div>
+        <table>
+            <tr>
+               <td colspan="5" style = "height: 50px; overflow: auto" ><input id = "display" placeholder="0"></label></td>
+            </tr>
+            
+            <tr>
+                <td class = "btn" onclick = "press(1)">1</td>
+                <td class = "btn" onclick = "press(2)">2</td>
+                <td class = "btn" onclick = "press(3)">3</td>
+                <td class = "btn" onclick = "press('-')">-</td> 
+            </tr>
+            <tr>
+                <td class = "btn" onclick = "press(4)">4</td>
+                <td class = "btn" onclick = "press(5)">5</td>
+                <td class = "btn" onclick = "press(6)">6</td>
+                <td class = "btn" onclick = "press('+')">+</td>
+                
+               
+            </tr>
+            <tr>
+                <td class = "btn" onclick = "press(7)">7</td>
+                <td class = "btn" onclick = "press(8)">8</td>
+                <td class = "btn" onclick = "press(9)">9</td>
+                <td class = "btn" onclick = "press('/')">/</td>
+                
+            </tr>
+            <tr>
+                <td class = "btn" onclick = "press('.')">.</td>
+                <td class = "btn" onclick = "press(0)">0</td>
+                <td class = "btn" onclick = "press('*')">*</td>
+                <td class = "btn equal" onclick = "equal()">=</td>   
+    
+               
+            </tr>
+            <tr>
+                <td class = "btn" onclick = "erase()">AC</td>
+                <td class = "btn" onclick = "del()">DEL</td>
+                <td class = "btn" onclick = "press('(')">&#40;</td>
+                <td class = "btn" onclick = "press(')')">&#41;</td>
+                
+            </tr>
+        </table>
+    </div>
+
+    <script src = index.js></script>
+</body>
+</html>
