@@ -1,0 +1,334 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+  supported by Chrome, Edge, Opera and Firefox */
+}  
+a:link{
+    text-decoration: none;
+}
+body{
+  display: flex;
+  min-height: 100vh;
+  background: maroon;
+}
+/*Sidebar*/
+.sidebar{
+  position: fixed;
+  background-color: white;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: 0.6s ease;
+}
+.sidebar .full{
+  opacity: 0;
+  display: none;
+  transition: 0s ease 0.3s;
+}
+.sidebar:hover{
+  width: 20%;
+}
+.sidebar:hover .full{
+  opacity: 1;
+  display: block;
+  
+}
+.sidebar .logo img{
+  height: 40px;
+  transition: 0.3s ease;
+}
+.logo{
+  
+  margin: 20px 10px;
+  display: flex;
+}
+.sidebar:hover .logo img{
+  height: 70px; 
+  width: auto;
+}
+.logo-text{
+  width: 200px;
+  height: 70px;
+  text-align: left;
+  flex-direction: column;
+  
+}
+.university-name{
+  color: rgb(86, 86, 86);
+  text-align: left;
+  font-family: 'Alkatra', cursive;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 23px;
+}
+.university-motto{
+  margin-top: 2px;
+  text-align: left;
+  text-transform: capitalize;
+  color: grey;
+  font-size: 10px;
+  text-wrap: nowrap;
+}
+.sidebar span{
+  margin-right: 10px;
+}
+.sidebar--child{
+ 
+  display: flex;
+  cursor: pointer;
+  padding: 5px;
+  margin: 20px 10px;
+}
+.sidebar--child:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.sidebar .message{
+  border-top:1px solid grey;
+  box-shadow: 1px 0px 1px black;
+  text-align: center;
+  padding-top: 7px;
+  width: 100%;
+  text-wrap: nowrap;
+  height: 60px;
+  position: absolute;
+  bottom: 0px;
+  font-size: 1.1rem;
+}
+.settings--container{
+  
+  display: flex;
+  flex-direction: column;
+  
+}
+.settings--container .settings--dropdown{
+
+  height: 0px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.drop .settings--dropdown{
+  height: 200px;
+}
+#settings-icon{
+  transition: 0.3s ease;
+}
+.settings--container .settings--dropdown > .option{
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  padding: 5px;
+  cursor: pointer;
+  color: black;
+}
+.settings--container .settings--dropdown > .option:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*Main Content*/
+.calendar-content{
+  background-color: green;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calendar-content .month{
+  text-transform: uppercase;
+
+}
+/*Wrapper*/
+.wrapper{ 
+  position: relative;
+  color: maroon;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  min-width: 420px;
+  min-height: 100vh;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+
+}
+.wrapper img{
+ 
+    width: 50%;
+    margin: auto;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+  
+}
+.wrapper .calendar-header{
+  display: flex;
+  align-items: center;
+  padding: 5px 30px;
+  justify-content: space-between;
+}
+.wrapper .clock{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  text-align: center;
+  height: 50px;
+  font-size: 1.2rem;
+}
+.calendar-wrapper{
+    width: 100%;
+    position: relative;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+ 
+    
+}
+.calendar-header .icons{
+  display: flex;
+}
+.calendar-header .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 4px;
+  cursor: pointer;
+  color: maroon;
+  background-color: white;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child{
+  margin-right: -10px;
+}
+.calendar-header .icons button{
+    background-color: white;
+    color: maroon;
+    border: 1px solid;
+    outline: none;
+    padding: 0px 10px;
+    padding: 5px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 0px 5px;
+    
+}
+.calendar-header .icons button:hover{
+    background-color: maroon;
+    color: white;
+   
+}
+.calendar-header .icons span:hover{
+
+  background-color: maroon;
+  color: white;
+}
+.calendar-header .current-date{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.calendar-header .current-date:hover{
+    cursor: pointer;
+}
+.calendar{
+    
+  padding: 20px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+  color: maroon;
+  
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background: maroon;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
+
+.calendar-wrapper .months{
+    
+    position: absolute;
+    display: grid;
+    background-color: white;
+    width: 100%; 
+    height: 100%;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 30px;
+    z-index: 1;
+    top: 0;
+    visibility: hidden;
+    transition: all .2s ease;
+    
+    /* display: none; */
+    
+}
+.months div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 45px;
+}
+.months div:hover{
+    color: white;
+    background-color: maroon;
+}
